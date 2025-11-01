@@ -1,0 +1,41 @@
+# --- Core Server ---
+fastapi==0.118.0
+uvicorn==0.37.0
+starlette==0.48.0
+httpx==0.28.1
+python-dotenv==1.1.1
+mysql-connector-python==9.1.0
+rich==14.1.0
+
+# --- LangChain Ecosystem ---
+langchain-openai==0.3.8
+langchain-community==0.3.8
+
+python-multipart==0.0.20
+
+# --- PDF / File Handling ---
+PyPDF2==3.0.1
+pypdf==6.1.1
+pypdfium2==4.30.0
+openpyxl==3.1.5
+python-docx==1.2.0
+python-pptx==1.0.2
+langchain-google-genai==2.1.2 
+
+# --- Database / ORM ---
+SQLAlchemy==2.0.35
+
+# --- Utilities ---
+pydantic==2.11.9
+pydantic-settings==2.11.0
+typing-extensions==4.15.0
+orjson==3.11.3
+requests==2.32.5
+
+# --- Security / Auth ---
+bcrypt==5.0.0
+email-validator==2.3.0
+passlib==1.7.4
+
+# --- Optional ---
+tiktoken==0.11.0

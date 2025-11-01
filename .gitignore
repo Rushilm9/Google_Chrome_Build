@@ -1,0 +1,6 @@
+myenv/
+.env
+__pycache__/
+uploads_papers/
+
+node_modules/
