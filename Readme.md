@@ -40,7 +40,7 @@ It integrates **Gemini**, **Chrome Built-in AI APIs**, and **LangChain** to auto
 
 ## 🏗️ System Architecture
 
-![Architecture](./images/arch2.png)
+![Architecture](./images/arch2.jpg)
 
 **Flow:**
 
