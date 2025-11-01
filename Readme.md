@@ -185,25 +185,6 @@ npm run dev
 
 ---
 
-## 🔗 API Highlights
-
-* **/keywords** – Generate keywords from prompt or PDF (Chrome Built-in AI + Gemini)
-* **/papers/search** – Query OpenAlex; rank & filter by relevance
-* **/papers/summarize** – Summarize abstracts or full texts (Gemini)
-* **/literature/review** – Auto-compose structured literature reviews
-* **/translate** – Local translation via Chrome on-device APIs
-
-*(Endpoints are illustrative; align with your actual routes.)*
-
----
-
-## 📄 Export
-
-* Export project summaries and literature reviews as **Markdown** or **PDF** from the UI.
-* PDFs can be generated client-side (print-to-PDF) or server-side (if you add a renderer).
-
----
-
 
 
 ## 🙌 Acknowledgements
