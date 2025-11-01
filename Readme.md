@@ -1,124 +1,106 @@
-# 🧠 i-Smart ScholAR
-
-An AI-powered academic assistant to **discover papers, analyze PDFs, generate summaries/translations, and craft literature reviews** — all in one place.
-
-> Example prompt:  
-> “Find the latest papers on few-shot learning after 2023 and summarize the key methods.”
+# 🧠 i-Smart ScholAR  
+*An AI-powered web application for smarter academic research and literature review*  
 
 ---
 
-## 🔎 Overview
-
-**i-Smart ScholAR** streamlines your research workflow:
-- Discover and rank relevant papers from your query/keywords
-- Upload PDFs for instant summaries, highlights, and Q&A
-- Generate structured **Literature Reviews** with citations
-- Translate abstracts and sections to your preferred language
-- Export insights to Markdown/PDF
+## 📘 Overview  
+**i-Smart ScholAR** is an intelligent academic assistant that helps researchers and students **discover, analyze, and summarize** research papers using AI.  
+It integrates **Gemini**, **Chrome Built-in AI APIs**, and **LangChain** to automate research workflows — from **keyword generation** to **literature review synthesis** — all within an interactive web app.  
 
 ---
 
-## ✨ Core Features
+## ⚡ Key Features  
 
-1. 🔍 **AI Keyword Generation**
-   - Extracts key terms from prompts or uploaded PDFs
-   - Helps refine search queries and paper retrieval
-
-2. 📚 **Smart Paper Retrieval**
-   - Finds papers and ranks them using AI-driven relevance
-   - Shows titles, abstracts, links, and quick actions
-
-3. 🧾 **Instant Summaries & Translations**
-   - TL;DR abstracts/sections
-   - Translate to EN/HI/ES/… with one click
-
-4. 🤖 **AI Literature Review**
-   - Auto-structures related work with headings
-   - Pulls out themes, gaps, and future directions
-   - Optional BibTeX parsing for citations
-
-5. 💾 **Export & Report**
-   - Export **Markdown** or **PDF** summaries/reviews
-   - Batch export multiple papers into one report
+✅ AI-based **keyword generation** from prompts or PDFs  
+✅ **Smart paper discovery & ranking** by relevance  
+✅ **Instant summaries and translations** using Chrome Built-in AI  
+✅ **Automated literature review** with Gemini  
+✅ **Report export** in Markdown or PDF  
+✅ Runs directly in Chrome with built-in AI support  
 
 ---
 
-## 🗂 Pages
+## 🧠 Core Technologies  
 
-### 🏠 Page 1: Home / Discovery
-
-![Home / Discovery](./images/translation.png)
-
-**What you can do**
-- Enter a research topic or paste an abstract
-- Auto-generate **keywords** and **search strings**
-- Retrieve and rank papers
-
-**Try prompts**
-- “Quantum error correction codes for near-term devices”
-- “LLM-based code generation reliability after 2024 — survey the latest”
+| Layer | Tools / Frameworks |
+|-------|--------------------|
+| 💻 **Frontend** | React.js, Vite, TailwindCSS |
+| ⚙️ **Backend** | FastAPI, LangChain |
+| 🧩 **AI Models / APIs** | Gemini API, Chrome Built-in AI APIs |
+| 🗄️ **Database** | MySQL |
+| 🌐 **External API** | OpenAlex (for research papers) |
 
 ---
 
-### 📄 Page 2: Paper Workspace
+## 🏗️ System Architecture  
+![Architecture](./images/arch2.png)
 
-![Literature Review](../images/paper.png)
-
-
-**What you can do**
-- Upload PDFs (`.pdf`) or attach retrieved papers
-- **Summarize**, **translate**, **extract keywords**
-- Ask questions like:
-  - “What is the main contribution vs. prior work?”
-  - “List datasets and evaluation metrics”
-  - “Explain the loss function in simple terms”
+**Flow:**  
+1. React frontend interacts with FastAPI backend via REST.  
+2. Backend integrates:  
+   - 🧠 **Gemini API** → Summarization, literature synthesis  
+   - ⚙️ **Chrome Built-in AI APIs** → Keyword generation, translation  
+   - 🔗 **LangChain** → Chaining and context handling  
+   - 🗄️ **MySQL** → Project data and metadata storage  
 
 ---
 
-### 🧠 Page 3: Literature Review
+## 🧩 Core Modules  
 
-![Literature Review](../images/literature.png)
-
-
-**What you can do**
-- Generate a structured review (Introduction → Themes → Gaps → Future Work)
-- Auto-include short citations or parse BibTeX
-- Edit section headers and re-generate any section
+### 1️⃣ Project Creation  
+![Dashboard](./images/project.png)  
+Manage your research projects — create, edit, and switch between topics easily.  
 
 ---
 
-### 📤 Page 4: Reports & Export
-
-**What you can do**
-- Combine multiple paper summaries into one report
-- Export **Markdown** or **PDF**
-- Include translated abstracts / key-insights table
+### 2️⃣ Keyword Generator  
+![Keyword Generator](./images/upload.png)  
+Generate keywords from prompts or PDFs using **Chrome Built-in AI** + **Gemini** for better search precision.  
 
 ---
 
-
-
-## 🏗 Tech Stack
-
-**Frontend**
-- React.js • HTML • CSS • JavaScript
-
-**Backend**
-- FastAPI (Python) • LangChain • Gemini API
-- MySQL (storage)
-- (Optional) Chrome Build APIs
+### 3️⃣ Paper List  
+![Paper List](./images/paper.png)  
+Fetch and rank research papers by AI relevance. Quickly view abstracts, summaries, and key findings.  
 
 ---
 
-## 📦 Clone & Run
+### 4️⃣ Literature Upload  
+![Upload](./images/lit-upload.png)  
+Upload PDFs and let AI extract key points like **contribution**, **methods**, and **results** using Gemini.  
 
-### 1) Backend
+---
 
+### 5️⃣ Literature Review  
+![Review](./images/literature.png)  
+Auto-generate a **structured literature review** divided into sections like:  
+- Introduction  
+- Related Work  
+- Key Themes  
+- Research Gaps  
+- Future Work  
+
+All synthesized intelligently via Gemini.  
+
+---
+
+### 6️⃣ Translation  
+![Translation](./images/translation.png)  
+Translate abstracts, summaries, or reviews using **Chrome Built-in Translation API** — offline and instant.  
+
+---
+
+## ⚙️ Setup Guide  
+
+### 🧩 Prerequisites  
+- 🐍 Python 3.9+  
+- 🧱 Node.js 18+  
+- 🐬 MySQL installed and running  
+
+---
+
+### 🔧 Backend Setup  
 ```bash
-git clone https://github.com/your-username/i-smart-scholar.git
-cd i-smart-scholar/backend
-
-# Create & activate venv (optional)
-# python -m venv .venv && source .venv/bin/activate
-
+cd backend
 pip install -r requirements.txt
+uvicorn main:app --reload
