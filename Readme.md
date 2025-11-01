@@ -47,7 +47,7 @@ An AI-powered academic assistant to **discover papers, analyze PDFs, generate su
 
 ### 🏠 Page 1: Home / Discovery
 
-![Home / Discovery](../images/translation.png)
+![Home / Discovery](./images/translation.png)
 
 **What you can do**
 - Enter a research topic or paste an abstract
