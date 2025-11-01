@@ -1,180 +1,124 @@
-% ===========================
-% LaTeX version of README.md
-% Paste this into your README as a fenced code block,
-% or compile as a standalone .tex document.
-% ===========================
-\documentclass[11pt]{article}
+# 🧠 i-Smart ScholAR
 
-\usepackage[a4paper,margin=1in]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{hyperref}
-\usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{listings}
-\usepackage{xcolor}
+An AI-powered academic assistant to **discover papers, analyze PDFs, generate summaries/translations, and craft literature reviews** — all in one place.
 
-\hypersetup{
-  colorlinks=true,
-  linkcolor=black,
-  urlcolor=blue
-}
+> Example prompt:  
+> “Find the latest papers on few-shot learning after 2023 and summarize the key methods.”
 
-\setlist[itemize]{leftmargin=1.2em}
-\setlist[enumerate]{leftmargin=1.2em}
+---
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}
-\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+## 🔎 Overview
 
-\lstdefinestyle{terminal}{
-  basicstyle=\ttfamily\small,
-  columns=fullflexible,
-  breaklines=true,
-  frame=single
-}
+**i-Smart ScholAR** streamlines your research workflow:
+- Discover and rank relevant papers from your query/keywords
+- Upload PDFs for instant summaries, highlights, and Q&A
+- Generate structured **Literature Reviews** with citations
+- Translate abstracts and sections to your preferred language
+- Export insights to Markdown/PDF
 
-\begin{document}
+---
 
-\begin{center}
-{\huge \textbf{🧠 i-Smart ScholAR}}\\[4pt]
-A smart AI-powered academic research assistant that helps users \textbf{discover, analyze, summarize, and understand} research papers faster and smarter.
-\end{center}
+## ✨ Core Features
 
-\hrule
-\vspace{1em}
+1. 🔍 **AI Keyword Generation**
+   - Extracts key terms from prompts or uploaded PDFs
+   - Helps refine search queries and paper retrieval
 
-\section*{🚀 Overview}
-\textit{i-Smart ScholAR} is a web-based AI assistant designed to assist researchers, educators, and students in managing academic literature. It automates paper discovery, summarization, translation, and literature review generation — saving hours of manual effort.
+2. 📚 **Smart Paper Retrieval**
+   - Finds papers and ranks them using AI-driven relevance
+   - Shows titles, abstracts, links, and quick actions
 
-\section*{✨ Features}
-\begin{itemize}
-  \item 🔍 \textbf{AI Keyword Generation} — Extracts key terms from prompts or uploaded files
-  \item 📚 \textbf{Smart Paper Retrieval} — Fetches and ranks research papers using AI-driven metrics
-  \item 🧾 \textbf{Instant Summaries \& Translations} — Summarizes and translates abstracts automatically
-  \item 🤖 \textbf{AI Literature Review} — Generates structured, insightful literature reviews
-  \item 💾 \textbf{Export \& Report} — Save and export concise summaries or full reports
-\end{itemize}
+3. 🧾 **Instant Summaries & Translations**
+   - TL;DR abstracts/sections
+   - Translate to EN/HI/ES/… with one click
 
-\section*{🏗 Tech Stack}
-\textbf{Frontend}
-\begin{itemize}
-  \item React.js
-  \item HTML / CSS / JavaScript
-\end{itemize}
+4. 🤖 **AI Literature Review**
+   - Auto-structures related work with headings
+   - Pulls out themes, gaps, and future directions
+   - Optional BibTeX parsing for citations
 
-\textbf{Backend}
-\begin{itemize}
-  \item FastAPI (Python)
-  \item MySQL
-  \item LangChain
-  \item Gemini API (for summarization, translation \& reasoning)
-  \item Chrome Build APIs
-\end{itemize}
+5. 💾 **Export & Report**
+   - Export **Markdown** or **PDF** summaries/reviews
+   - Batch export multiple papers into one report
 
-\section*{📁 Project Structure}
-\begin{lstlisting}[style=terminal]
-i-smart-scholAR/
-├── frontend/        # React frontend
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── ...
-│
-├── backend/         # FastAPI backend
-│   ├── app/
-│   ├── requirements.txt
-│   ├── main.py
-│   └── ...
-│
-└── README.md
-\end{lstlisting}
+---
 
-\section*{⚙️ Setup \& Installation}
+## 🗂 Pages
 
-\subsection*{🖥 Backend Setup}
-\begin{lstlisting}[style=terminal,language=bash]
-cd backend
+### 🏠 Page 1: Home / Discovery
+
+![Home / Discovery](../images/translation.png)
+
+**What you can do**
+- Enter a research topic or paste an abstract
+- Auto-generate **keywords** and **search strings**
+- Retrieve and rank papers
+
+**Try prompts**
+- “Quantum error correction codes for near-term devices”
+- “LLM-based code generation reliability after 2024 — survey the latest”
+
+---
+
+### 📄 Page 2: Paper Workspace
+
+![Literature Review](../images/paper.png)
+
+
+**What you can do**
+- Upload PDFs (`.pdf`) or attach retrieved papers
+- **Summarize**, **translate**, **extract keywords**
+- Ask questions like:
+  - “What is the main contribution vs. prior work?”
+  - “List datasets and evaluation metrics”
+  - “Explain the loss function in simple terms”
+
+---
+
+### 🧠 Page 3: Literature Review
+
+![Literature Review](../images/literature.png)
+
+
+**What you can do**
+- Generate a structured review (Introduction → Themes → Gaps → Future Work)
+- Auto-include short citations or parse BibTeX
+- Edit section headers and re-generate any section
+
+---
+
+### 📤 Page 4: Reports & Export
+
+**What you can do**
+- Combine multiple paper summaries into one report
+- Export **Markdown** or **PDF**
+- Include translated abstracts / key-insights table
+
+---
+
+
+
+## 🏗 Tech Stack
+
+**Frontend**
+- React.js • HTML • CSS • JavaScript
+
+**Backend**
+- FastAPI (Python) • LangChain • Gemini API
+- MySQL (storage)
+- (Optional) Chrome Build APIs
+
+---
+
+## 📦 Clone & Run
+
+### 1) Backend
+
+```bash
+git clone https://github.com/your-username/i-smart-scholar.git
+cd i-smart-scholar/backend
+
+# Create & activate venv (optional)
+# python -m venv .venv && source .venv/bin/activate
+
 pip install -r requirements.txt
-uvicorn main:app --reload
-\end{lstlisting}
-
-This starts the FastAPI backend server (default: \url{http://127.0.0.1:8000}).
-
-\subsection*{💻 Frontend Setup}
-\begin{lstlisting}[style=terminal,language=bash]
-cd frontend
-npm install
-npm run build
-npm start
-\end{lstlisting}
-
-This runs the frontend (default: \url{http://localhost:3000}).
-
-\section*{🧩 How It Works}
-\begin{enumerate}
-  \item Users enter prompts or upload research papers.
-  \item The backend uses \textbf{LangChain agents} and \textbf{Gemini} to analyze content.
-  \item Summaries, translations, and recommendations are generated automatically.
-  \item Results are stored in \textbf{MySQL} and displayed via the \textbf{React} interface.
-\end{enumerate}
-
-\section*{🏅 Accomplishments}
-\begin{itemize}
-  \item Developed a fully functional AI-powered academic assistant
-  \item Integrated \textit{Gemini AI}, \textit{LangChain}, and \textit{Chrome APIs} for intelligent processing
-  \item Used by students and teachers at our institute for real research tasks
-\end{itemize}
-
-\section*{📚 What We Learned}
-\begin{itemize}
-  \item Integrating multiple AI services efficiently
-  \item Using Chrome Build APIs for local summarization and translation
-  \item Managing API tokens and optimizing LLM calls
-  \item Building a cost-effective browser–AI hybrid workflow
-\end{itemize}
-
-\section*{🚀 What’s Next}
-\begin{itemize}
-  \item Launch beta testing for institute users
-  \item Add analytics and usage insights
-  \item Enhance summarization and recommendation accuracy
-  \item Prepare for broader public release
-\end{itemize}
-
-\section*{📸 Screenshots}
-Add your project screenshots here (interface, dashboard, or results page).
-
-\textbf{Example folder structure:}
-\begin{lstlisting}[style=terminal]
-frontend/assets/screenshots/
-│
-├── home_page.png
-├── analysis_view.png
-└── summary_report.png
-\end{lstlisting}
-
-\textbf{Example image display (Markdown):}
-\begin{lstlisting}[style=terminal]
-![Home Page](./frontend/assets/screenshots/home_page.png)
-![Analysis View](./frontend/assets/screenshots/analysis_view.png)
-![Summary Report](./frontend/assets/screenshots/summary_report.png)
-\end{lstlisting}
-
-\section*{🧑‍💻 Contributors}
-\begin{itemize}
-  \item \textbf{Your Name(s)} — Developer / Researcher
-  \item \textbf{Team / Institute} — [Your Institute Name Here]
-\end{itemize}
-
-\section*{📄 License}
-This project is released under the \textbf{MIT License}. Feel free to use, modify, and improve it for educational and research purposes.
-
-\bigskip
-\hrule
-\bigskip
-
-\begin{center}
-\textbf{⭐ i-Smart ScholAR — Making AI-Assisted Research Accessible, Efficient \& Impactful.}
-\end{center}
-
-\end{document}
